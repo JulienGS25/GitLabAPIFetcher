@@ -11,9 +11,9 @@ print('This is usually a project number under one of the following formats.')
 time.sleep(0.5)
 print('P1234, p1234 or 1234')
 search_terms = input('Search terms: ')
-token = 'o6kyg1syfgrQDSsdzxkJ'
-
-url = 'https://vcs.optelgroup.com/api/v4/projects?private_token=' + token + '&search=' + search_terms
+token = '' #Enter token here
+gitlab_instance = '' #Enter URL here
+url = gitlab_instance + 'api/v4/projects?private_token=' + token + '&search=' + search_terms 
 resp = requests.get(url).json()
 
 print('')
